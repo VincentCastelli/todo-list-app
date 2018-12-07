@@ -14,14 +14,15 @@ export default Header = () => {
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 10,
+    marginVertical: 25,
+    marginHorizontal: 15,
   },
   text: {
-    fontSize: 20,
+    fontSize: 30,
     color: '#FFFFFF',
   },
 });
