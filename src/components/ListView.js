@@ -14,7 +14,7 @@ export default class ListView extends Component {
     this.onContentSizeChange = this.onContentSizeChange.bind(this);
   }
 
-  onContentSizeChange = (contentWidth, contentHeight) => {
+  onContentSizeChange(contentWidth, contentHeight) {
     this.setState({ screenHeight: contentHeight });
   }
 
@@ -22,7 +22,7 @@ export default class ListView extends Component {
     const scrollEnabled = this.state.screenHeight > height - 30;
     return (
       <View style={{flex: 1}}>
-        <StatusBar barStyle={ 'light-content' } backgroundColor={ '#417A44' } />
+        <StatusBar barStyle={ 'light-content' } backgroundColor={ '#513F6D' } />
         <ScrollView 
           style={{flex: 1}}
           contentContainerStyle={styles.scrollView}
