@@ -8,6 +8,7 @@ export default class UserInput extends Component {
 
     this.state = {
       currentTodo: null,
+      todoList: [],
     }
 
     this.onChangeText = this.onChangeText.bind(this);
@@ -19,13 +20,6 @@ export default class UserInput extends Component {
     this.setState({ currentTodo: text }); 
   }
 
-  onPress() {
-    // send put to database
-    this.setState({ currentTodo: null });
-    console.log(this.state.currentTodo);
-    // get refreshed todo list
-  }
-
   render() {
     return (
       <View style={ styles.container }>
@@ -35,13 +29,6 @@ export default class UserInput extends Component {
           value={ this.state.currentTodo }
           placeholder={'Enter a todo...'}
         />
-        <TouchableOpacity
-          style={ styles.button }
-          onPress={ this.onPress }
-          activeOpacity= { 0.7 }
-        >
-         <Text style= { styles.buttonText }>✚</Text>
-        </TouchableOpacity>
       </View>
       
     );
@@ -57,13 +44,4 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 20,
   },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#5EA162',
-    padding: 10
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 15,
-  }
 });

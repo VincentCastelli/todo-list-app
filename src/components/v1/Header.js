@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { bold } from 'ansi-colors';
+
+import Button from './src/components/Button';
 
 export default Header = () => {
   
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Logo</Text>
+        <Button />
       </View>
     );
 }
