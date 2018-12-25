@@ -21,7 +21,7 @@ export default class ListView extends Component {
   }
 
   render() {
-    const scrollEnabled = this.state.screenHeight > height - 30;
+    const scrollEnabled = this.state.screenHeight > height - 60;
 
     return (
       <ScrollView 
@@ -31,7 +31,12 @@ export default class ListView extends Component {
         onContentSizeChange={this.onContentSizeChange}
       >
         <View>
-          <ListViewEntry todos={ this.props.todos } />
+          {this.props.todos.map(todo => 
+            <ListViewEntry 
+              key={ todo.id }
+              todo={ todo } 
+            />
+          )}
         </View>
       </ScrollView>
     );
@@ -42,7 +47,4 @@ const styles = StyleSheet.create({
   scrollView: {
     flexGrow: 1,
   },
-  text: {
-   fontSize: 25,
-  }
 });

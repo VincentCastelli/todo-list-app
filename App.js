@@ -11,10 +11,59 @@ export default class App extends Component {
     this.state = {
       todoList: [
         {
-          time: '12:00:00',
-          description: 'This is the new todo action item',
+          id: '000009',
+          time: '22:00:00',
+          description: 'This is the newest todo action item created',
           completed: false
         },
+        {
+          id: '000008',
+          time: '20:00:00',
+          description: 'This is the eigth todo action item created',
+          completed: false
+        },
+        {
+          id: '000007',
+          time: '20:00:00',
+          description: 'This is the seventh todo action item created',
+          completed: false
+        },
+        {
+          id: '000006',
+          time: '20:00:00',
+          description: 'This is the sixth todo action item created',
+          completed: false
+        },
+        {
+          id: '000005',
+          time: '17:00:00',
+          description: 'This is the fifth todo action item created',
+          completed: false
+        },
+        {
+          id: '000004',
+          time: '15:00:00',
+          description: 'This is the fourth todo action item created',
+          completed: false
+        },
+        {
+          id: '000003',
+          time: '13:00:00',
+          description: 'This is the third todo action item created',
+          completed: false
+        },
+        {
+          id: '000002',
+          time: '12:00:00',
+          description: 'This is the second todo action item created',
+          completed: false
+        },
+        {
+          id: '000001',
+          time: '10:00:00',
+          description: 'This is the first todo action item created',
+          completed: false
+        }
       ],
       currentTodo: null,
     }
@@ -53,7 +102,7 @@ export default class App extends Component {
             value={ currentTodo }
           />
         </View>
-        <View style={{flex: 1}}>
+        <View style={ styles.listView }>
           <ListView 
             todos={ todoList }
           />
@@ -66,12 +115,11 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#DDDDDD',
   },
   defaultText: {
     fontSize: 22,
     padding: 10,
-    margin: 5,
   },
   logoText: {
     fontSize: 28,
@@ -107,7 +155,10 @@ const styles = StyleSheet.create({
     width: 50,
   },
   inputField: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#DDDDDD',
+    backgroundColor: '#EEEEEE',
+  },
+  listView: {
+    flex: 1,
+    marginHorizontal: 10,
   }
 });
